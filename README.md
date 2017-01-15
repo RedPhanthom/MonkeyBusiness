@@ -1,0 +1,2 @@
+# MonkeyBusiness
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d3b9437269c4d1fbac9446c18d847cf)](https://www.codacy.com/app/RedPhanthom/MonkeyBusiness?utm_source=github.com&utm_medium=referral&utm_content=RedPhanthom/MonkeyBusiness&utm_campaign=badger)
