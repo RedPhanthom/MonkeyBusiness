@@ -20,7 +20,10 @@ public class MonkeyBusiness {
 		// Variables
 		final int numOfMnks = 4;
 		final int numOfDays = 7;
-		int avgDaily = 0, avgWeekly = 0, total = 0, least = 0, most = 0;
+		int avgWeekly = 0;
+		int total = 0;
+		int least = 0;
+		int most = 0;
 
 		// X * X 2D Array
 		int[][] monkeyArray = new int[numOfMnks][numOfDays];
@@ -36,7 +39,7 @@ public class MonkeyBusiness {
 					do {
 						System.out.printf("Monkey %d, Day %d: ", (row + 1), (col + 1));
 						monkeyArray[row][col] = keyIn.nextInt();
-						if(monkeyArray[row][col] <= -1 || monkeyArray[row][col] >= 50){
+						if (monkeyArray[row][col] <= -1 || monkeyArray[row][col] >= 50) {
 							System.out.println("Number can't be negative, Or greater than 50.");
 							monkeyArray[row][col] = keyIn.nextInt();
 						}
@@ -47,10 +50,10 @@ public class MonkeyBusiness {
 
 			for (int row = 0; row < numOfMnks; row++) {
 				for (int col = 0; col < numOfDays; col++) {
-					if(monkeyArray[row][col] < least){
+					if (monkeyArray[row][col] < least) {
 						least = monkeyArray[row][col];
 					}
-					if(monkeyArray[row][col] > most){
+					if (monkeyArray[row][col] > most) {
 						most = monkeyArray[row][col];
 					}
 					total += monkeyArray[row][col];
@@ -60,8 +63,10 @@ public class MonkeyBusiness {
 			e.printStackTrace();
 		}
 
+		keyIn.close();
+
 		System.out.println("Total: " + total + " Pounds");
-		System.out.println("Weekly Average: " + avgWeekly/21.0 + " Pounds");
+		System.out.println("Weekly Average: " + avgWeekly / 21.0 + " Pounds");
 		System.out.println("Least Amount: " + least + " Pounds");
 		System.out.println("Most Amount: " + most + " Pounds");
 	}
